@@ -9,6 +9,12 @@
 * Routing
 * Pipes
 
+## Vorbereitung
+
+* Projekt anlegen
+  * nicht abhängig machen von Internetverbindung
+  * npm install vorab ausführen
+
 ## Speaker Notes
 
 * Projekt anlegen
