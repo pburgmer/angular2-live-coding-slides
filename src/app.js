@@ -8,6 +8,9 @@
 
       'about-me',
       'about-us',
+
+      'raffle',
+
       'overview',
       'live-coding',
 
