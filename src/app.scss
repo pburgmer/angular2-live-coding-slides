@@ -1,13 +1,16 @@
-$tcc_orange: #ed5502;
-$tcc-gray: #1c2330;
+$tcc_orange: #005da8;
+$tcc-orange: $tcc_orange;
+$tcc-gray: #00b1e6;
 $tcc-gray-light: lighten($tcc-gray, 20%);
 $tcc-gray-lighter: lighten($tcc-gray, 40%);
 $tcc-gray-lightest: lighten($tcc-gray, 78%);
-$tcc-gradient-orange-start: #fc9253;
-$tcc-gradient-orange-end: #f26135;
+$tcc-gradient-orange-start: lighten($tcc_orange, 2%);
+$tcc-gradient-orange-end: darken($tcc_orange, 8%);
 $tcc-code-bg-1: desaturate($tcc-gray-lightest, 50%);
 $tcc-code-bg-2: darken($tcc-code-bg-1, 5%);
 $tcc-code-bg-3: darken($tcc-code-bg-1, 20%);
+
+$title-border-color: #4a7ebb;
 
 // ****************************************************************************************************
 // general
@@ -65,12 +68,91 @@ $w11k-prettyPrint-line-color-highlight: $tcc-code-bg-3;
 // slides content
 // ****************************************************************************************************
 
-.tcc-2016 {
+.tcc-2016.it-tage-2016 {
   .slides > .slide-container > div > .slide {
 
+    * {
+      font-family: "Calibri";
+    }
+
     &.title {
-      .center .content {
-        margin: -4.5vw 0 -5.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+
+      overflow: hidden;
+
+      background: white;
+
+      .top {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        vertical-align: middle;
+
+        width: 100%;
+
+        .start {
+          img { height: 3.2em; }
+          width: 33.33%;
+        }
+
+        .end {
+          width: 33.33%;
+          text-align: right;
+          img {
+            height: 1.8em;
+          }
+        }
+        color: $tcc_orange;
+        border-bottom: 0.16em solid $title-border-color;
+        padding: 0.8em 0.5em;
+      }
+
+      .center {
+        flex-grow: 1;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .start {
+          flex-grow: 30;
+        }
+
+        .content {
+          flex-grow: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          vertical-align: middle;
+          text-align: center;
+
+          img.name {
+            height: 1.6em;
+            margin-bottom: 1.6em;
+          }
+
+          img.topic {
+            height: 2.3em;
+          }
+        }
+
+        .end {
+          flex-grow: 70;
+        }
+      }
+
+      .bottom {
+        color: $tcc_orange;
+        border-top: 0.16em solid $title-border-color;
+        padding: 2em 0.5em 0.8em 0.5em;
+        text-align: center;
       }
     }
 
